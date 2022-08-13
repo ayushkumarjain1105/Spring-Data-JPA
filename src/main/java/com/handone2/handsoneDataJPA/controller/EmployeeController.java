@@ -37,6 +37,9 @@ public class EmployeeController {
     public List<Employee> findByEmployeeSalaryBetween(@PathVariable("s1") String S1, @PathVariable("s2") String S2){
         return employeeService.findByEmployeeSalaryBetween(S1, S2);
     }
-
+    @GetMapping("/salary&Department/{salary}&{dep}")
+    public List<Employee> findByEmployeeSalaryGreaterThanAndEmployeeDepartment(@PathVariable("salary") String salary, @PathVariable("dep") String department){
+        return employeeService.findByEmployeeSalaryGreaterThanAndEmployeeDepartment(salary,department);
+    }
 
 }

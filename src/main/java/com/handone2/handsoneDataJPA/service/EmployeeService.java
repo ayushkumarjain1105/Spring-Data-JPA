@@ -34,4 +34,8 @@ public class EmployeeService {
     public List<Employee> findByEmployeeSalaryBetween(String s1, String s2) {
         return employeeRepository.findByEmployeeSalaryBetween(s1,s2);
     }
+
+    public List<Employee> findByEmployeeSalaryGreaterThanAndEmployeeDepartment(String salary, String department) {
+        return employeeRepository.findByEmployeeSalaryGreaterThanAndEmployeeDepartment(salary,department);
+    }
 }
